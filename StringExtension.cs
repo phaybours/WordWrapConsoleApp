@@ -36,7 +36,7 @@ namespace WordWrapConsoleApp
                     }
                     shortWord2 = originalString.Substring(shortWord2.Length);
 
-                    if (shortWord2.Length > length) //truncate it further
+                    if (shortWord2.Length > length)
                     {
                         List<string> retValues = SplitTheSentenceAtWord(shortWord2.TrimStart(), length);
                         truncatedStrings.AddRange(retValues);
@@ -51,7 +51,7 @@ namespace WordWrapConsoleApp
 
                 var retVal_Last = originalString.Substring(0, length);
                 truncatedStrings.Add(retVal_Last);
-                if (originalString.Length > length)//truncate it further
+                if (originalString.Length > length)
                 {
                     string shortWord3 = originalString;
                     if (originalString.EndsWith("..."))
